@@ -19,6 +19,9 @@ class UIDetailTest {
     companion object {
         val LIST_ITEM_ID = 0
         val NAME_TEXT = "Rick Allen"
+        val PARTY_TEXT = "Republican"
+        val DISTRICT_TEXT = "GA - District 12"
+        val PHONE_TEXT = "202-225-2823"
 
     }
 
@@ -32,6 +35,33 @@ class UIDetailTest {
         onView(withId(R.id.layout_list)).perform(click(0, 0))
 
         onView(withId(R.id.profile_name)).check(matches(withText(NAME_TEXT)))
+
+    }
+
+    @Test
+    fun detailParty() {
+
+        onView(withId(R.id.layout_list)).perform(click(0, 0))
+
+        onView(withId(R.id.profile_party)).check(matches(withText(PARTY_TEXT)))
+
+    }
+
+    @Test
+    fun detailDistrict() {
+
+        onView(withId(R.id.layout_list)).perform(click(0, 0))
+
+        onView(withId(R.id.profile_district)).check(matches(withText(DISTRICT_TEXT)))
+
+    }
+
+    @Test
+    fun detailPhone() {
+
+        onView(withId(R.id.layout_list)).perform(click(0, 0))
+
+        onView(withId(R.id.profile_phone)).check(matches(withText(PHONE_TEXT)))
 
     }
 }

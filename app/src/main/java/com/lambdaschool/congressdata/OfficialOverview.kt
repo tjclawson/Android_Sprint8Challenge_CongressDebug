@@ -35,7 +35,7 @@ class OfficialOverview {
         this.id = congresspersonOverview.id
     }
 
-    fun buildDisplayName(): String {
+    private fun buildDisplayName(): String {
         val nameBuilder = StringBuilder()
         nameBuilder.append(firstName?.toLowerCase()?.capitalize()).append(" ")
         if (middleName != "null") {
