@@ -37,3 +37,14 @@ The requirements for this project are as follows:
 ## Go Further
 
 After you finish with these requirements, spend the rest of the time improving coverage on your unit tests, improving the UI tests and improving overall performance.
+
+Bugs Fixed
+1. CongresspersonProfileViewModel> has no zero argument constructor
+	remove var id from constructor
+
+2. buildDisplayName
+	output was lower case w/ with no space between first and middle name
+	added spaces with .append, add .capitalize after .toLowerCase
+
+3. RunOnUIThread
+	removed run on UI thread calls to reduce CPU usage
