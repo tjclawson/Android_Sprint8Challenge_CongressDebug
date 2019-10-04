@@ -19,19 +19,4 @@ class CongresspersonListViewModel : ViewModel() {
         overviewList = OverviewListRepository.overviewList
         return overviewList
     }
-
-    fun loadThings(listAdapter: OverviewListAdapter?, layoutList: RecyclerView, list: ArrayList<OfficialOverview> ) {
-        assert(list != null)
-
-        // using recycler view
-        list?.let {
-            listAdapter = OverviewListAdapter(list)
-            layoutList!!.adapter = listAdapter
-        }
-        // using scroll view
-        /*for (OfficialOverview officialOverview : overviewList) {
-    scrollData.addView(getDefaultTextView(officialOverview.getDisplayName(),
-                                          officialOverview.getId()));
-}*/
-    }
 }

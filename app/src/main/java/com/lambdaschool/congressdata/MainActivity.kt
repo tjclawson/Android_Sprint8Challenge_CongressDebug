@@ -62,9 +62,7 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProviders.of(this).get(CongresspersonListViewModel::class.java!!)
 
         viewModel.overviewList?.observe(this, Observer { overviewList ->
-
-            viewModel.loadThings(listAdapter, layoutList as RecyclerView, overviewList!!)
-            /*runOnUiThread {
+            //runOnUiThread {
                 assert(overviewList != null)
 
                 // using recycler view
@@ -77,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 scrollData.addView(getDefaultTextView(officialOverview.getDisplayName(),
                                                       officialOverview.getId()));
             }*/
-            }*/
+           // }
         })
     }
 
