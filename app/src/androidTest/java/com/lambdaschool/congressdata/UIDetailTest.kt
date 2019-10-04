@@ -30,7 +30,6 @@ class UIDetailTest {
     fun detailTitle() {
 
         onView(withId(R.id.layout_list)).perform(click(0, 0))
-        //onView(withId(R.id.layout_list)).perform(RecyclerViewActions.actionOnItemAtPosition<androidx.recyclerview.widget.RecyclerView.ViewHolder>(1, click()))
 
         onView(withId(R.id.profile_name)).check(matches(withText(NAME_TEXT)))
 
