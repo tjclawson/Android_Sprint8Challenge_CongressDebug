@@ -73,7 +73,7 @@ class DetailsActivity : AppCompatActivity() {
         viewModel.id = memberId
 
         viewModel.profile?.observe(this, Observer<CongresspersonProfile> { profile ->
-            runOnUiThread {
+           // runOnUiThread {
                 assert(profile != null)
                 profileImage!!.setImageBitmap(profile!!.image)
                 profileName!!.setText(profile!!.displayName)
@@ -111,7 +111,7 @@ class DetailsActivity : AppCompatActivity() {
                         startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/search/" + profile!!.office)))
                     }
                 }
-            }
+            //}
         })
         }
 
